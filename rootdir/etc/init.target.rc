@@ -222,6 +222,38 @@ on boot
     write /proc/sys/kernel/hung_task_check_interval_secs 0
     write /proc/sys/kernel/hung_task_selective_monitoring 0
 
+  # Setup dalvik vm configs
+on post-fs && property:ro.boot.ddr_size=8192
+    setprop dalvik.vm.heapstartsize 16m
+    setprop dalvik.vm.heapgrowthlimit 384m
+    setprop dalvik.vm.heapsize 512m
+    setprop dalvik.vm.heaptargetutilization 0.75
+    setprop dalvik.vm.heapminfree 512k
+    setprop dalvik.vm.heapmaxfree 8m
+on post-fs && property:ro.boot.ddr_size=12288
+    setprop dalvik.vm.heapstartsize 24m
+    setprop dalvik.vm.heapgrowthlimit 384m
+    setprop dalvik.vm.heapsize 512m
+    setprop dalvik.vm.heaptargetutilization 0.42
+    setprop dalvik.vm.heapminfree 8m
+    setprop dalvik.vm.heapmaxfree 56m
+
+    # LEDs
+    chown system system /sys/class/leds/led:torch_0/brightness
+    chmod 0666 /sys/class/leds/led:torch_0/brightness
+    chown system system /sys/class/leds/led:torch_1/brightness
+    chmod 0666 /sys/class/leds/led:torch_1/brightness
+    chown system system /sys/class/leds/led:switch_0/brightness
+    chmod 0666 /sys/class/leds/led:switch_0/brightness
+    chown system system /sys/class/leds/led:switch_1/brightness
+    chmod 0666 /sys/class/leds/led:switch_1/brightness
+    chown system system /sys/class/leds/led:switch_2/brightness
+    chmod 0666 /sys/class/leds/led:switch_2/brightness
+    chown system system /sys/class/leds/led:torch_2/brightness
+    chmod 0666 /sys/class/leds/led:torch_2/brightness
+    chown system system /sys/class/leds/led:switch_3/brightness
+    chmod 0666 /sys/class/leds/led:switch_3/brightness
+
     #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
