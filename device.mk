@@ -193,6 +193,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 $(call soong_config_set,camera,override_format_from_reserved,true)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.system_ext.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries.txt
 
 # Display
 PRODUCT_PACKAGES += \
