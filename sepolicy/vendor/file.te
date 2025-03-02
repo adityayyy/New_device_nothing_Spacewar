@@ -1,2 +1,5 @@
 # Fingerprint
 type fingerprint_data_file, data_file_type, file_type;
+
+# Torch
+type sysfs_torch, sysfs_type, fs_type;
