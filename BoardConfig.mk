@@ -1,5 +1,6 @@
-#
-# Copyright (C) 2022-2025 The LineageOS Project
+
+# Copyright (C) 2022-2025 The LineageOS Project	
+# 
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -41,8 +42,16 @@ TARGET_2ND_CPU_VARIANT := cortex-a76
 TARGET_BOOTLOADER_BOARD_NAME := Spacewar
 TARGET_NO_BOOTLOADER := true
 
+
 # Camera
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
+
+# Build
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
+# Camera
+TARGET_CAMERA_SERVICE_EXT_LIB := //$(DEVICE_PATH):libcameraservice_extension.Spacewar
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
