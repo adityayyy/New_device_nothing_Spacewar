@@ -72,6 +72,16 @@
     <bool name="config_enableWifiDisplay">true</bool>
 
     <!-- Set to true if the wifi display supports compositing content stored
+  <integer name="config_screenBrightnessDoze">255</integer>
+  <!-- Type of the tap sensor. Empty if tap is not supported. -->
+  <string name="config_dozeTapSensorType" translatable="false">com.android.sensor.single_touch</string>
+  <!-- Flag indicating if the speed up audio on mt call code should be executed -->
+  <bool name="config_speed_up_audio_on_mt_calls">true</bool>
+  <!-- Minimum color temperature, in Kelvin, supported by display white balance. -->
+  <integer name="config_displayWhiteBalanceColorTemperatureMin">4400</integer>
+  <!-- Maximum color temperature, in Kelvin, supported by display white balance. -->
+  <integer name="config_displayWhiteBalanceColorTemperatureMax">7794</integer>
+  <!-- Set to true if the wifi display supports compositing content stored
          in gralloc protected buffers.  For this to be true, there must exist
          a protected hardware path for surface flinger to composite and send
          protected buffers to the wifi display video encoder.
@@ -216,6 +226,7 @@
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
          and Strength as defined in Authenticators.java -->
+<<<<<<< HEAD
     <string-array name="config_biometric_sensors" translatable="false">
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
@@ -239,6 +250,34 @@
     </integer-array>
 
     <!-- The following two arrays specify which color space to use for display composition when a
+=======
+  <string-array name="config_biometric_sensors" translatable="false">
+    <item>0:2:15</item>
+    <!-- ID0:Fingerprint:Strong -->
+  </string-array>
+  <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
+  <integer-array name="config_udfps_sensor_props" translatable="false">
+    <item>540</item>
+    <!-- <item>sensorLocationX</item> -->
+    <item>2170</item>
+    <!-- <item>sensorLocationY</item> -->
+    <item>94</item>
+    <!-- <item>sensorRadius</item> -->
+  </integer-array>
+  <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
+  <string name="config_dozeUdfpsLongPressSensorType" translatable="false">com.android.sensor.udfps</string>
+  <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
+  <integer-array name="config_availableColorModes">
+    <item>260</item>
+    <!-- Nothing Custom Alive Color Mode -->
+    <item>0</item>
+    <!-- COLOR_MODE_NATURAL -->
+    <item>1</item>
+    <!-- COLOR_MODE_BOOSTED -->
+    <item>2</item>
+    <!-- COLOR_MODE_SATURATED -->
+  </integer-array>
+  <!-- The following two arrays specify which color space to use for display composition when a
          certain color mode is active.
          Composition color spaces are defined in android.view.Display.COLOR_MODE_xxx, and color
          modes are defined in ColorDisplayManager.COLOR_MODE_xxx and
