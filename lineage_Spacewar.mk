@@ -30,3 +30,23 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=Spacewar \
     BuildDesc="Spacewar-user 12 SKQ1.211230.001 1666412462 release-keys" \
     BuildFingerprint="Nothing/Spacewar/Spacewar:12/SKQ1.211230.001/1666412462:user/release-keys"
+
+# Rising vars
+
+# Lunch banner maintainer variable
+RISING_MAINTAINER="Aditya"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Snapdragon_778G+" \
+    RisingMaintainer="Aditya"
+
+RISING_MAINTAINER := Aditya
+TARGET_ENABLE_BLUR := true
+PRODUCT_NO_CAMERA := false
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+EXTRA_UDFPS_ICONS := true
+TARGET_HAS_UDFPS := true
+TARGET_UDFPS_ANIMATIONS := true
+TARGET_SUPPORTS_BLUR := true
+WITH_GMS := true
+TARGET_INCLUDE_GOOGLE_DIALER := true
