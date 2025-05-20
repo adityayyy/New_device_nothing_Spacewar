@@ -219,7 +219,8 @@ $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/nothing:libudfps_ext
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.qti
+    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-service
 
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
