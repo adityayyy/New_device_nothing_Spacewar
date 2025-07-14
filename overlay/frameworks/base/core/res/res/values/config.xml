@@ -539,6 +539,11 @@
         <item>30</item>
     </integer-array>
 
+
+    <!-- Pocket Lock -->
+    <bool name="config_pocketModeSupported">true</bool>
+
+
     <!-- Vibrator pattern for feedback when selecting a day/month/year date of a Calendar -->
     <integer-array name="config_calendarDateVibePattern">
         <item>125</item>
