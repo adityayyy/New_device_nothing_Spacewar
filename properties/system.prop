@@ -64,3 +64,10 @@ ro.vendor.qti.va_aosp.support=1
 # Nt Feature
 ro.build.nothing.feature.base=0x4458438124a040126b4247b97ffL
 ro.build.nothing.feature.diff.device.Spacewar=0x8a0042a4041a032c34800L
+
+#infinity 
+ro.infinity.soc=Snapdragon 8 Elite
+ro.infinity.battery=7000 mAh
+ro.infinity.display=1264 x 2780, 144 Hz
+ro.infinity.camera=50MP + 50MP
+ro.product.marketname=Nothing phone 1
